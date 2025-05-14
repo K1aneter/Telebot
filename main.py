@@ -81,4 +81,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    from aiogram.enums import ParseMode
+    dp.run_polling(bot, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
